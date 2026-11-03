@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Falcon handles data in its personal backup workflow.">
+  <title>Privacy Policy — Falcon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">F</span> Falcon</a><nav aria-label="Main navigation"><a href="index.html">Home <span aria-hidden="true">↗</span></a></nav></header>
+    <main class="policy">
+      <p class="eyebrow">Falcon / Information</p>
+      <h1>Privacy policy</h1>
+      <p class="lead">How data is handled in Falcon’s personal VPS backup workflow.</p>
+      <p class="updated">Last updated: November 3, 2026</p>
+      <div class="policy-body">
+        <section><h2>Purpose and data</h2><p>Falcon is a personal system operated by its owner, not a public service for other users. It processes selected VPS configuration files and backup metadata to create and manage backups. These files may contain sensitive information.</p></section>
+        <section><h2>Google Drive access</h2><p>Falcon uses Google OAuth 2.0 to authorize rclone to use the Google Drive API on the owner’s account. This access supports uploading, reading, checking, and maintaining backup files, including deleting them when the owner chooses. Access depends on the permissions granted during authorization.</p><p>Google user data is used for this backup workflow. Backup data is stored in Google Drive; Google processes it as the storage provider. Falcon does not sell Google user data or use it for advertising.</p></section>
+        <section><h2>Encryption and credentials</h2><p>restic encrypts backup contents on the VPS before upload to Google Drive. OAuth tokens are stored locally in rclone’s configuration on the VPS and are not published on this website. The security of backups and credentials also depends on the owner’s configuration and protection of the VPS and encryption keys.</p></section>
+        <section><h2>Retention and deletion</h2><p>The owner controls how long backups are kept and can remove them from Google Drive using the backup tools or Drive. Retention and deletion depend on the owner’s configuration and actions; no fixed retention period is promised. Google’s own deletion and retention practices may also apply.</p></section>
+        <section><h2>Revoking access</h2><p>The owner can revoke Falcon’s access through the <a href="https://myaccount.google.com/connections">Google Account connections settings</a>. Revoking access stops future authorized Drive operations; it does not itself delete backups already stored in Drive.</p></section>
+        <section><h2>Website and infrastructure</h2><p>This static site is hosted on GitHub Pages. Falcon does not add its own analytics, advertising, or user tracking to the site. GitHub and Google may process technical information according to their own policies when providing hosting and storage.</p></section>
+      </div>
+    </main>
+    <footer><span>Falcon <span class="muted">/ Personal VPS backups</span></span><a href="index.html">Back to home</a></footer>
+  </div>
+</body>
+</html>

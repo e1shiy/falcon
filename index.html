@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Falcon is a personal encrypted VPS backup system.">
+  <title>Falcon — Personal VPS backups</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">F</span> Falcon</a><nav aria-label="Main navigation"><a href="privacy.html">Privacy policy <span aria-hidden="true">↗</span></a></nav></header>
+    <main>
+      <section class="intro" aria-labelledby="title">
+        <p class="eyebrow"><span class="status-dot"></span> Personal infrastructure / backup</p>
+        <h1 id="title">A quieter way to<br><span>keep a copy.</span></h1>
+        <p class="lead">Falcon is a personal backup system for a Debian VPS. It creates encrypted copies of server configuration and stores them in the owner’s Google Drive.</p>
+        <p class="note">Built for one owner. Falcon is not a public service.</p>
+      </section>
+      <section class="section" aria-labelledby="works-title">
+        <div class="section-heading"><p class="eyebrow">01 / The system</p><h2 id="works-title">How it works</h2></div>
+        <div class="steps">
+          <article><span class="step-number">01</span><div><h3>Encrypt locally</h3><p>restic creates encrypted backups of selected server configuration files before they leave the VPS.</p></div></article>
+          <article><span class="step-number">02</span><div><h3>Store in Drive</h3><p>rclone transfers the encrypted backup data to the owner’s Google Drive. systemd runs the backup process on a schedule.</p></div></article>
+          <article><span class="step-number">03</span><div><h3>Maintain and restore</h3><p>The owner can read, check, restore, and maintain backups as needed.</p></div></article>
+        </div>
+      </section>
+      <section class="section access" aria-labelledby="access-title"><div class="section-heading"><p class="eyebrow">02 / Access</p><h2 id="access-title">Why Google Drive?</h2></div><div><p>Google OAuth 2.0 authorizes rclone to access the owner’s Drive for saving, reading, checking, and maintaining backup data. Access is used for the owner’s personal backup workflow.</p><a class="text-link" href="privacy.html">Read the privacy policy <span aria-hidden="true">→</span></a></div></section>
+    </main>
+    <footer><span>Falcon <span class="muted">/ Personal VPS backups</span></span><a href="privacy.html">Privacy policy</a></footer>
+  </div>
+</body>
+</html>
